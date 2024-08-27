@@ -1,4 +1,4 @@
-# Login Page Test Data
+# Account Creation page Test Data
 Username = "Admin"
 Password = "admin123"
 Email = "test123test954"

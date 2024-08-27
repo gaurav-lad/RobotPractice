@@ -4,14 +4,6 @@ Variables  ../Locators/Locators.py
 Variables  ../TestData/Testdata.py
 
 *** Keywords ***
-Input Username
-    Input Text  ${LoginUsernameInputBox}  ${Username}
-
-Click Login
-    Click Element  ${LoginButton}
-
-Click SignIn
-    Click Element    ${SignInButton}
 
 Click CreateAccount
     Click Element    ${CreateAccountButton}
