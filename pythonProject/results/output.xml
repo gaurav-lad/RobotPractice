@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.11 on win32)" generated="2024-08-27T05:23:47.897502" rpa="false" schemaversion="5">
+<suite id="s1" name="YahooLogin Test" source="C:\Users\gaura\PycharmProjects\pythonProject\Tests\YahooLogin_Test.robot">
+<test id="s1-t1" name="Verify Yahoo Finance Account creation" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-27T05:23:48.418933" level="INFO">Opening browser 'Chrome' to base url 'https://finance.yahoo.com/'.</msg>
+<arg>https://finance.yahoo.com/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-27T05:23:48.418933" elapsed="59.114244"/>
+</kw>
+<kw name="Verify SignIn Button is Visible" owner="HomePage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-27T05:24:47.924973" level="INFO">Element 'id:login-container' is displayed.</msg>
+<arg>${SignInButton}</arg>
+<arg>timeout=5</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-27T05:24:47.681505" elapsed="0.244467"/>
+</kw>
+<status status="PASS" start="2024-08-27T05:24:47.656354" elapsed="0.269618"/>
+</kw>
+<kw name="Click SignIn" owner="LoginPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-27T05:24:47.932125" level="INFO">Clicking element 'id:login-container'.</msg>
+<arg>${SignInButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-27T05:24:47.930131" elapsed="6.235094"/>
+</kw>
+<status status="PASS" start="2024-08-27T05:24:47.926968" elapsed="6.239256"/>
+</kw>
+<kw name="Verify Create an Account Button is Visible" owner="LoginPage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-27T05:24:54.246785" level="INFO">Element 'id:createacc' is displayed.</msg>
+<arg>${CreateAccountButton}</arg>
+<arg>timeout=5</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-27T05:24:54.175204" elapsed="0.071581"/>
+</kw>
+<status status="PASS" start="2024-08-27T05:24:54.174202" elapsed="0.072583"/>
+</kw>
+<kw name="Click CreateAccount" owner="LoginPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-27T05:24:54.249778" level="INFO">Clicking element 'id:createacc'.</msg>
+<arg>${CreateAccountButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-27T05:24:54.248779" elapsed="0.956283"/>
+</kw>
+<status status="PASS" start="2024-08-27T05:24:54.248779" elapsed="0.957281"/>
+</kw>
+<kw name="Verify Create Account is Visible" owner="CreateAccountPage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-27T05:24:55.269417" level="INFO">Element 'id:usernamereg-firstName' is displayed.</msg>
+<arg>${FullName}</arg>
+<arg>timeout=10</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-27T05:24:55.213041" elapsed="0.056376"/>
+</kw>
+<status status="PASS" start="2024-08-27T05:24:55.211047" elapsed="0.059367"/>
+</kw>
+<kw name="Input FirstName" owner="CreateAccountPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-27T05:24:55.280387" level="INFO">Typing text 'Admin' into text field 'id:usernamereg-firstName'.</msg>
+<arg>${LoginUsernameInputBox}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-27T05:24:55.278393" elapsed="0.179588"/>
+</kw>
+<status status="PASS" start="2024-08-27T05:24:55.276398" elapsed="0.182580"/>
+</kw>
+<kw name="Input EmailAddress" owner="CreateAccountPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-27T05:24:55.461969" level="INFO">Typing text 'test123test954' into text field 'id:usernamereg-userId'.</msg>
+<arg>${LoginEmailInputBox}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-27T05:24:55.460976" elapsed="0.170582"/>
+</kw>
+<status status="PASS" start="2024-08-27T05:24:55.459977" elapsed="0.172590"/>
+</kw>
+<kw name="Input Password" owner="CreateAccountPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-27T05:24:55.634555" level="INFO">Typing text 'admin123' into text field 'usernamereg-password'.</msg>
+<arg>${LoginPasswordInputBox}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-27T05:24:55.634555" elapsed="0.219555"/>
+</kw>
+<status status="PASS" start="2024-08-27T05:24:55.633557" elapsed="0.220553"/>
+</kw>
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2024-08-27T05:24:55.860094" level="INFO">Selecting options from selection list 'id:usernamereg-month' by index 1.</msg>
+<arg>id:usernamereg-month</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2024-08-27T05:24:55.859101" elapsed="0.145058"/>
+</kw>
+<kw name="Input Day" owner="CreateAccountPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-27T05:24:56.009154" level="INFO">Typing text '3' into text field 'id:usernamereg-day'.</msg>
+<arg>${Date}</arg>
+<arg>${InputDate}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-27T05:24:56.009154" elapsed="0.086844"/>
+</kw>
+<status status="PASS" start="2024-08-27T05:24:56.008148" elapsed="0.087850"/>
+</kw>
+<kw name="Input Year" owner="CreateAccountPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-27T05:24:56.097482" level="INFO">Typing text '2000' into text field 'id:usernamereg-year'.</msg>
+<arg>${Year}</arg>
+<arg>${InputYear}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-27T05:24:56.097482" elapsed="0.092515"/>
+</kw>
+<status status="PASS" start="2024-08-27T05:24:56.097482" elapsed="0.094499"/>
+</kw>
+<kw name="Click Next" owner="CreateAccountPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-27T05:24:56.192979" level="INFO">Clicking element 'id:reg-submit-button'.</msg>
+<arg>${CreateAccountNext}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-27T05:24:56.192979" elapsed="0.608498"/>
+</kw>
+<status status="PASS" start="2024-08-27T05:24:56.192979" elapsed="0.609493"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-27T05:24:56.802472" elapsed="2.827177"/>
+</kw>
+<doc>This test case verifies Yahoo FInance Account Creation</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-08-27T05:23:48.417933" elapsed="71.214102"/>
+</test>
+<doc>Page Object in Robot Framework</doc>
+<status status="PASS" start="2024-08-27T05:23:47.902067" elapsed="71.737584"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="YahooLogin Test">YahooLogin Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
